@@ -5,7 +5,7 @@ import { CreateMovieDTO } from './dto/create-movie.dto';
 import { UpdateMovieDTO } from './dto/update-movie.dto';
 import { Movie } from './entities/movie.entity';
 import { MoviesService } from './movies.service';
-import { Body, Controller, Delete, Get, Param, Patch, Post} from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Patch, Post, Req, Res} from "@nestjs/common";
 
 @Controller("movies")
 export class MoviesController {
