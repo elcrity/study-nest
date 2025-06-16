@@ -48,31 +48,31 @@
 // }
 
 
-import { useState } from "react";
+// import { useState } from "react";
 
-const fecthPizza = () => fetch("https://dough.pizza.com/makePizza");
+// const fecthPizza = () => fetch("https://dough.pizza.com/makePizza");
 
-export default function PizzaOrder() {
-    const [success, setSuccess] = useState(false);
+// export default function PizzaOrder() {
+//     const [success, setSuccess] = useState(false);
 
-    const makePizza = async () => {
-        try {
-            const makeHundredPizza = Array.from({ length: 100 }).map(() => makePizza());
-            await Promise.all(makeHundredPizza); // 100개 요청 병렬 실행
-            setSuccess(true); // 모든 요청이 성공하면 success 활성화
-        } catch (err) {
-            console.log("피자 만드는 도중 에러 발생 : ", err);
+//     const makePizza = async () => {
+//         try {
+//             const makeHundredPizza = Array.from({ length: 100 }).map(() => makePizza());
+//             await Promise.all(makeHundredPizza); // 100개 요청 병렬 실행
+//             setSuccess(true); // 모든 요청이 성공하면 success 활성화
+//         } catch (err) {
+//             console.log("피자 만드는 도중 에러 발생 : ", err);
             
-        }
-    };
+//         }
+//     };
 
-    return (
-        <div>
-            <h2>피자 주문</h2>
-            <p>{loading ? "피자 만드는 중...🍕" : success ? "피자 완성! 🚀" : "대기 중"}</p>
-            <button onClick={makePizza} disabled={loading}>
-                피자 만들기
-            </button>
-        </div>
-    );
-}
+//     return (
+//         <div>
+//             <h2>피자 주문</h2>
+//             <p>{loading ? "피자 만드는 중...🍕" : success ? "피자 완성! 🚀" : "대기 중"}</p>
+//             <button onClick={makePizza} disabled={loading}>
+//                 피자 만들기
+//             </button>
+//         </div>
+//     );
+// }
